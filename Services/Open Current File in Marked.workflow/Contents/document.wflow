@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>330</string>
+	<key>AMApplicationVersion</key>
+	<string>2.2.2</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.1</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Run AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>-- Open in Marked-- Attempts to open the currently-edited document in Marked for previewing-- By Brett Terpstra &lt;http://brettterpstra.com&gt;-- for Marked &lt;http://markedapp.com&gt;-- Based on ideas by Lri &lt;https://gist.github.com/1077745&gt;-- with contributions from Donald Curtis &lt;https://github.com/milkypostman&gt;on run {}	tell application "System Events"		set frontApp to (name of first process whose frontmost is true)	end tell	tell application frontApp to activate	set f to false	set flist to {}		--Marked (if Marked is foreground, hide Marked and end script)	if frontApp is "Marked" then		tell application "System Events" to set visible of process "Marked" to false		return		--Notational Velocity/nvALT	else if frontApp is "Finder" then		tell application "Finder" to set flist to (get selection)		-- Emacs?	else if frontApp is "Emacs" then		set emacsclient to false		tell application "Finder"			if exists POSIX file "/usr/local/bin/emacsclient" then				set emacsclient to "/usr/local/bin/emacsclient"			end if		end tell		if emacsclient is not false then			set f to do shell script emacsclient &amp; " -e '(first (delete nil (mapcar (function buffer-file-name) (buffer-list))))' | sed 's/^\"//' | sed 's/\"$//'" as string			if f is not "nil" then				set f to f as POSIX file as alias			else				set f to false			end if		end if		--Byword (open current document)	else if frontApp is "Byword" then		tell application frontApp to set f to file of document of window 1 as alias	else if frontApp is "TextEdit" then		tell application frontApp to set f to path of document of window 1 as POSIX file	else if frontApp is "Mou" then		tell application "System Events"			set f to text 17 thru -1 of (value of attribute "AXDocument" of first window of process "Mou" as text)		end tell	else		tell application "System Events"			tell process frontApp				try					set isScriptable to has scripting terminology				on error					set isScriptable to false				end try			end tell		end tell		if isScriptable then			try				tell application frontApp to set f to POSIX file (path of document 1 of window 1) as alias			end try			if f is false then				try					tell application frontApp to set f to POSIX file (path of first document) as alias				end try			end if			if f is false then				try					tell application frontApp to set f to POSIX file (text 17 thru -1 of (get URL of document 1)) as alias -- BBEdit				end try			end if		end if	end if		if f is false and flist is not {} then		tell application "Marked"			activate			repeat with afile in flist				open (afile as alias)			end repeat		end tell	else if f is not false then		tell application "Marked"			activate			open f		end tell	end ifend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.1</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>BF1A33C8-AC86-4E27-BCDF-032E82335A97</string>
+				<key>Keywords</key>
+				<array>
+					<string>Run</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>481CDC65-D777-4FBC-9404-11D2149BE37F</string>
+				<key>UUID</key>
+				<string>0D994D77-D1BA-48EB-82C3-F43CA91236E2</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>309.500000:442.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict/>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>serviceInputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>serviceOutputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>serviceProcessesInput</key>
+		<integer>0</integer>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.servicesMenu</string>
+	</dict>
+</dict>
+</plist>

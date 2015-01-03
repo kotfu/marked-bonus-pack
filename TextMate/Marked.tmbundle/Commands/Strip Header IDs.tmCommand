@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>bundleUUID</key>
+	<string>6BAFBBE3-B71D-46D5-AF4C-0CEC7D6CBD8A</string>
+	<key>command</key>
+	<string>#! /usr/bin/ruby
+
+input = STDIN.read
+
+puts input.gsub(/(h\d) id=".*?"/,"\\1")</string>
+	<key>input</key>
+	<string>document</string>
+	<key>name</key>
+	<string>Strip Header IDs</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>uuid</key>
+	<string>3EF019C4-CBFC-470B-8FF5-5FD7B9833A6B</string>
+</dict>
+</plist>

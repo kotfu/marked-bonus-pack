@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>open -a Marked.app "$TM_FILEPATH"
+osascript -e 'tell application "Marked" to activate'</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^~m</string>
+	<key>name</key>
+	<string>Open in Marked</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>text.html.markdown, text.html.markdown.multimarkdown, text.html</string>
+	<key>uuid</key>
+	<string>107B2632-BF47-4CD9-A056-9042607C5732</string>
+</dict>
+</plist>
