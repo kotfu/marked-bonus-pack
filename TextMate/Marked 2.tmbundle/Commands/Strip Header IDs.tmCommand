@@ -4,23 +4,28 @@
 <dict>
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
-	<key>bundleUUID</key>
-	<string>6BAFBBE3-B71D-46D5-AF4C-0CEC7D6CBD8A</string>
 	<key>command</key>
-	<string>#! /usr/bin/ruby
-
+	<string>#!/usr/bin/env ruby18 -wKU
 input = STDIN.read
-
-puts input.gsub(/(h\d) id=".*?"/,"\\1")</string>
+puts input.gsub(/(h\d) id=".*?"/,"\\1")
+</string>
 	<key>input</key>
 	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>name</key>
 	<string>Strip Header IDs</string>
-	<key>output</key>
-	<string>replaceSelectedText</string>
+	<key>outputCaret</key>
+	<string>heuristic</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
 	<key>scope</key>
 	<string>text.html</string>
 	<key>uuid</key>
-	<string>3EF019C4-CBFC-470B-8FF5-5FD7B9833A6B</string>
+	<string>E66EE61A-0D66-44B0-899E-DA4DD9D1E20F</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

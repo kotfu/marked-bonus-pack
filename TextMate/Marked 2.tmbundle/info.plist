@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>wnerq@xbgsh.arg</string>
+	<key>contactName</key>
+	<string>Jared Crapo</string>
+	<key>description</key>
+	<string>Preview markdown in [Marked 2](http://marked2app.com).</string>
+	<key>name</key>
+	<string>Marked 2</string>
+	<key>uuid</key>
+	<string>98FC9536-43B0-4A09-873E-DD7ED25C291B</string>
+</dict>
+</plist>
