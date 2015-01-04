@@ -1,4 +1,0 @@
-CFBundleName = "ScrivWatcher";
-CFBundleShortVersionString = "1.3";
-CFBundleGetInfoString = "ScrivWatcher version 1.3 Copyright 2012 Brett Terpstra";
-NSHumanReadableCopyright = "Copyright 2012 Brett Terpstra.";

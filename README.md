@@ -2,15 +2,17 @@
 
 The Marked Bonus Pack is a collection of scripts, commands and services. Some work with multiple editors, some are specific to certain editors. The Services will generally work with any editor that has the necessary capabilities. The rest are organized in folders based on the application they work with.
 
+These items work with Marked 2. If you need support for the original version of Marked, you will need to download [Marked Bonus Pack 1.5](https://github.com/kotfu/marked-bonus-pack/releases/tag/v1.5)
+
 ## Installation and Usage
 
 ### Services
 
-Put the Services in `~/Library/Services`, where ~ is your user's home folder. If you want hotkeys for the services, assign them in **System Preferences->Keyboard->Shortcuts->Services**.
+Put the Services in `~/Library/Services`, where `~` is your user's home folder. If you want hotkeys for the services, assign them in **System Preferences->Keyboard->Shortcuts->Services**.
 
 ### TextMate
 
-Double-click on the Marked bundle to open it in TextMate's Bundle Editor. You can access the preview commands using Control-Command-M. There are two of these commands, one previews the current document and will watch the associated file for future changes, the other previews the current selection using a temporary file. The latter will not update automatically.
+Double-click on the `Marked 2` bundle to open it in TextMate's Bundle Editor. You can access the preview commands using `Control-Command-M`. There are two of these commands, one previews the current document and will watch the associated file for future changes, the other previews the current selection using a temporary file. The latter will not update automatically.
 
 ### Sublime Text 2
 
@@ -51,16 +53,17 @@ The nvALT scripts do their best to figure out the file, but don't always work. T
 
 ### Watchers ###
 
+Marked version 1 required some watcher scripts to work with Scrivener and MarsEdit. Marked 2 has built in support for these applications, and no watcher scripts are required.
 
 More info: <http://brettterpstra.com/marked-scripts-nvalt-evernote-marsedit-scrivener/>
 
 ### Notes:
 
-For all of these scripts (except for the Scrivener Droplet app), the easiest way to use them is to put them in a convenient folder (I use `~/scripts`) and run `chmod a+x path/to/script.rb` to make them executable. With the exception of the Scrivener script (`scrivwatch.rb`), you can then just type the path and script name and hit Enter (e.g. `~/scripts/everwatch.rb`). They will run and watch for changes in their specific application until you cancel the command by typing `Control-c`.
+The easiest way to use these scripts is to put them in a convenient folder (I use `~/scripts`) and run `chmod a+x path/to/script.rb` to make them executable. You can then just type the path and script name and hit Enter (e.g. `~/scripts/everwatch.rb`). They will run and watch for changes in their specific application until you cancel the command by typing `Control-c`.
 
 The scripts will create a file in your home directory (modifiable in the script) called 'Marked Preview.md'. Open that file in Marked; Marked will watch that file for changes that the scripts make.
 
-You can create LaunchAgents for any of these (except, again, Scrivener) and run them automatically in the background if you know what you're doing. If you don't, you can still use an app like [Lingon](http://www.peterborgapps.com/lingon/) to do it.
+You can create LaunchAgents for any of these and run them automatically in the background if you know what you're doing. If you don't, you can still use an app like [Lingon](http://www.peterborgapps.com/lingon/) to do it.
 
 #### Evernote
 
@@ -69,10 +72,6 @@ To keep the 'Marked Preview.md' file synced with whatever note you're currently 
 The HTML of the note is captured via AppleScript and run through `textutil` to remove the HTML formatting. This means that embedded images won't come through, but those probably would have broken anyway. The script is specifically expecting you to write your notes in Markdown. If you're not, I'm not sure why you'd want a Marked preview anyway...
 
 Even with "Command-S" there's still a 4-5 second delay on the update, as it takes a bit for Evernote to write out to the file, the script to poll through and notice the change, the content to be pulled via AppleScript and written to the preview file and then for Marked to pick up on the change there. Considering all of that, 4-5 seconds isn't too bad. If someone can think of a faster way, I'm certainly open to it.
-
-#### Scrivener/MarsEdit
-
-Scrivener and MarsEdit support is now built into Marked 2.
 
 #### Notational Velocity/nvALT
 
