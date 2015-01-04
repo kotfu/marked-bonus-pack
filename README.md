@@ -2,7 +2,7 @@
 
 The Marked Bonus Pack is a collection of scripts, commands and services. Some work with multiple editors, some are specific to certain editors. The Services will generally work with any editor that has the necessary capabilities. The rest are organized in folders based on the application they work with.
 
-These items work with Marked 2. If you need support for the original version of Marked, you will need to download [Marked Bonus Pack 1.5](https://github.com/kotfu/marked-bonus-pack/releases/tag/v1.5)
+These items work with [Marked 2](http://marked2app.com). If you need support for the original version of Marked, you will need to download [Marked Bonus Pack 1.5](https://github.com/kotfu/marked-bonus-pack/releases/tag/v1.5)
 
 ## Installation and Usage
 
