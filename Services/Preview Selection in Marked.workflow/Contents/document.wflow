@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>329</string>
+	<string>381</string>
 	<key>AMApplicationVersion</key>
-	<string>2.2</string>
+	<string>2.4</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -25,7 +25,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>2.0.2</string>
+				<string>2.0.3</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -59,9 +59,10 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>cat &gt; $HOME/Marked\ Preview.md
-open -a "Marked.app" $HOME/Marked\ Preview.md
-osascript -e 'tell application "Marked" to activate'</string>
+					<string>TMPFILE=`mktemp -t marked2-preview`
+cat &gt; $TMPFILE
+open -a "Marked 2.app" $TMPFILE
+osascript -e 'tell application "Marked 2" to activate'</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -74,7 +75,7 @@ osascript -e 'tell application "Marked" to activate'</string>
 				<key>BundleIdentifier</key>
 				<string>com.apple.RunShellScript</string>
 				<key>CFBundleVersion</key>
-				<string>2.0.2</string>
+				<string>2.0.3</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -174,7 +175,7 @@ osascript -e 'tell application "Marked" to activate'</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:576.000000</string>
+				<string>254.500000:554.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
