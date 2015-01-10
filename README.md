@@ -12,7 +12,7 @@ Put the Services in `~/Library/Services`, where `~` is your user's home folder. 
 
 ### TextMate
 
-Double-click on the `Marked 2` bundle to open it in TextMate's Bundle Editor. You can access the preview commands using `Control-Command-M`. There are two of these commands, one previews the current document and will watch the associated file for future changes, the other previews the current selection using a temporary file. The latter will not update automatically.
+Double-click on the `Marked 2` bundle to open it in TextMate's Bundle Editor. You can access the preview commands using `Control-Alt-M`. There are two of these commands, one previews the current document and will watch the associated file for future changes, the other previews the current selection using a temporary file. The latter will not update automatically.
 
 ### Sublime Text 2
 
@@ -28,22 +28,19 @@ Add the following to your .vimrc file
 
 **\m** (or your preferred leader) will now open the current file in Marked.
 
-### Emacs ###
+### Emacs
 
 Via [Barry](http://spacebeast.com/blog/)
 
-Add the following to your .emacs file
+Install the `dot.emacs.txt` file in one of the following ways (depending on how you have configured your emacs startup):
 
-	(defun markdown-preview-file ()
-	  "run Marked on the current file and revert the buffer"
-	  (interactive)
-	  (shell-command 
-	   (format "open -a /Applications/Marked\ 2.app %s" 
-	       (shell-quote-argument (buffer-file-name))))
-	)
-	(global-set-key "\C-cm" 'markdown-preview-file)
+ 1. Append the contents of `dot.emacs.txt` to `~/.emacs`
+ 2. Append the contents of `dot.emacs.txt` to `~/.emacs.d/init.el`
+ 3. Copy `dot.emacs.txt` to `~/.emacs.d/marked2.el` and ensure it is loaded by `~/.emacs.d/init.el`
+ 
+See [http://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html](http://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html) for more information about emacs startup.
 
-Command key is **Control-c m**
+Once installed, restart Emacs. Press `<Control>-C m` to preview the file associated with the current buffer in Marked 2.
 
 ### AppleScript
 

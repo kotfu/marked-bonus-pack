@@ -1,8 +1,8 @@
 (defun markdown-preview-file ()
-  "run Marked on the current file and revert the buffer"
+  "use Marked 2 to preview the current file"
   (interactive)
   (shell-command 
-   (format "open -a /Applications/Marked.app %s" 
+   (format "open -a 'Marked 2.app' %s" 
        (shell-quote-argument (buffer-file-name))))
 )
 (global-set-key "\C-cm" 'markdown-preview-file)
