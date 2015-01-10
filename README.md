@@ -82,3 +82,5 @@ You need to configure the script to point to your chosen folder for note storage
 
 [nv]: http://notational.net
 [nvalt]: http://brettterpstra.com/projects/nvalt
+
+
