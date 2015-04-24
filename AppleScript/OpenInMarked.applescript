@@ -76,6 +76,8 @@ else if frontApp is "Mou" then
 	end tell
 else if frontApp is "TextWrangler" then
 	tell application frontApp to set f to file of document of window 1 as alias
+else if frontApp is "DEVONthink Pro" then
+	tell application "DEVONthink Pro" to set f to path of content record of think window 1
 else
 	tell application "System Events"
 		tell process frontApp
