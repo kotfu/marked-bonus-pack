@@ -16,7 +16,7 @@ Double-click on the `Marked 2` bundle to open it in TextMate's Bundle Editor. Yo
 
 ### Sublime Text 2
 
-Copy the `Marked 2.sublime-build1 file to `~/Library/Application Support/Sublime Text 2/Packages/User/`. It will show up in the "Build Systems" section of the **Tools** menu in Sublime. When selected, pressing Command-B will open the current file in Marked for preview. Once opened, changes to the file will be tracked automatically by Marked.
+Copy the `Marked 2.sublime-build1` file to `~/Library/Application Support/Sublime Text 2/Packages/User/`. It will show up in the "Build Systems" section of the **Tools** menu in Sublime. When selected, pressing `Command-B` will open the current file in Marked for preview. Once opened, changes to the file will be tracked automatically by Marked.
 
 ### Vim
 
