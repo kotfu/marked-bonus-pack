@@ -6,6 +6,15 @@
 trap("SIGINT") { exit }
 
 watch_folder = File.expand_path("~/Library/Application Support/Evernote/data")
+if not File.directory?(watch_folder)
+  # evernote from the app store uses a different path
+  # because of the sandbox rules
+  app_folder = File.expand_path("~/Library/Application Support/com.evernote.Evernote/accounts/www.evernote.com")
+  # inside app_folder, there is a folder with your evernote user id. If you
+  # have multiple evernote user id's this will probably break, but most
+  # people don't, so we should be good 
+  watch_folder = Dir.glob("#{app_folder}/*").first
+end
 marked_note = File.expand_path("~/Marked Preview.md")
 counter = 0
 
@@ -44,7 +53,7 @@ while true do # repeat infinitely
 APPLESCRIPT}
     unless note == '' # if we got something back from the AppleScript
       # convert the contents to plain text
-      txtnote = %x{echo '#{note}'|textutil -stdin -convert txt -stdout}
+      txtnote = %x{echo '<html><body>#{note}</body></html>'|textutil -stdin -convert txt -stdout}
       # write the contents to the preview file
       watch_note = File.new("#{marked_note}",'w')
       watch_note.puts txtnote

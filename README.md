@@ -66,7 +66,9 @@ You can create LaunchAgents for any of these and run them automatically in the b
 
 To keep the 'Marked Preview.md' file synced with whatever note you're currently editing in Evernote, start the script by running `~/path/to/everwatch.rb` in Terminal. The script watches for changes to timestamps on any directory in Evernote's data folder. This shouldn't need to be adjusted. To update Marked, you'll need to have "~/Marked Preview.md" open and then hit "Command-S" in your Evernote note. The autosave on Evernote will work, but it takes longer. 
 
-The HTML of the note is captured via AppleScript and run through `textutil` to remove the HTML formatting. This means that embedded images won't come through, but those probably would have broken anyway. The script is specifically expecting you to write your notes in Markdown. If you're not, I'm not sure why you'd want a Marked preview anyway...
+The HTML of the note is captured via AppleScript and run through `textutil` to remove the HTML formatting. This means that embedded images won't come through, but those probably would have broken anyway. The script is specifically expecting you to write your notes in Markdown. If you're not, I'm not sure why you'd want a Marked preview anyway. Inline HTML works, but you have to watch your quote marks very carefully. Evernote likes to convert the single and double quote marks you type into "smart quotes", which Marked doesn't interpret as HTML.
+
+This watcher will not reliably if you have multiple Evernote user id's.
 
 Even with "Command-S" there's still a 4-5 second delay on the update, as it takes a bit for Evernote to write out to the file, the script to poll through and notice the change, the content to be pulled via AppleScript and written to the preview file and then for Marked to pick up on the change there. Considering all of that, 4-5 seconds isn't too bad. If someone can think of a faster way, I'm certainly open to it.
 
