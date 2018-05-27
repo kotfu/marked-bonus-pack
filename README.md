@@ -10,6 +10,10 @@ These items work with [Marked 2](http://marked2app.com). If you need support for
 
 Put the Services in `~/Library/Services`, where `~` is your user's home folder. If you want hotkeys for the services, assign them in **System Preferences->Keyboard->Shortcuts->Services**.
 
+### BBEdit
+
+Place `BBEdit/Open in Marked.applescript` in `~/Library/Application Support/BBEdit/Scripts/`. Use from the Script menu bar item while editing a Markdown document (must be saved first). You can assign a keyboard shortcut in BBEedit **Preferences->Menus & Shortcuts**.
+
 ### TextMate
 
 Double-click on the `Marked 2` bundle to open it in TextMate's Bundle Editor. You can access the preview commands using `Control-Alt-M`. There are two of these commands, one previews the current document and will watch the associated file for future changes, the other previews the current selection using a temporary file. The latter will not update automatically.
