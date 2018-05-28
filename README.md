@@ -42,13 +42,22 @@ Marked.
 
 ### Vim
 
-Via [A Whole Lot of Bollocks](http://captainbollocks.tumblr.com/post/9858989188/linking-macvim-and-marked-app):
-
+Via [A Whole Lot of Bollocks](http://captainbollocks.tumblr.com/post/9858989188/linking-macvim-and-marked-app).
 Add the following to your .vimrc file:
 
 	:nnoremap <leader>m :silent !open -a Marked\ 2.app '%:p'<cr>
 
 **\m** (or your preferred leader) will now open the current file in Marked.
+
+From [dixius99](https://github.com/dixius99):
+
+You may prefer a :command instead of using the leader key to launch Marked. To do that,
+add the following to your .vimrc:
+
+	command Marked :silent !open -a Marked\ 2.app '%:p'
+
+The word right after "command" is what triggers the action. It can be anything
+you want, but has to start with a capital letter.
 
 ### iA Writer
 
