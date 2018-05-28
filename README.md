@@ -51,7 +51,7 @@ Add the following to your .vimrc file:
 
 From [dixius99](https://github.com/dixius99):
 
-You may prefer a :command instead of using the leader key to launch Marked. To do that,
+You may prefer `:Marked` instead of using the leader key to launch Marked. To do that,
 add the following to your .vimrc:
 
 	command Marked :silent !open -a Marked\ 2.app '%:p'
@@ -61,7 +61,7 @@ you want, but has to start with a capital letter.
 
 ### iA Writer
 
-Via [stephenhowells](https://gist.github.com/stephenhowells/4599997)
+Via [stephenhowells](https://gist.github.com/stephenhowells/4599997):
 
 Copy `iAWriter/Open in Marked.applescript` to `~/Library/Scripts/Applications/iA Writer/`. Run by clicking
 the Script menu and selecting "Open in Marked" from the "iA Writer" section.
