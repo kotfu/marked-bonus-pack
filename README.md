@@ -32,13 +32,17 @@ these commands, one previews the current document and will watch the associated
 file for future changes, the other previews the current selection using a
 temporary file. The latter will not update automatically.
 
-### Sublime Text 2
+### Sublime Text
 
-Copy the `Marked 2.sublime-build1` file to `~/Library/Application Support/Sublime Text 2/Packages/User/`.
+Copy the `Marked 2.sublime-build` file to `~/Library/Application Support/Sublime Text 3/Packages/User/`.
 It will show up in the "Build Systems" section of the **Tools** menu in Sublime.
 When selected, pressing `Command-B` will open the current file in Marked for
 preview. Once opened, changes to the file will be tracked automatically by
 Marked.
+
+(This extension will also work with Sublime Text 2. Just copy
+`Marked 2.sublime-build` to
+`~/Library/Application Support/Sublime Text 2/Packages/User/`.)
 
 ### Vim
 
@@ -78,7 +82,7 @@ you have configured your emacs startup):
  3. Copy `dot.emacs.txt` to `~/.emacs.d/marked2.el` and ensure it is loaded by `~/.emacs.d/init.el`
  
 See
-[http://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html](http://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html)
+[The Emacs Initialization File](http://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html)
 for more information about emacs startup.
 
 Once installed, restart Emacs. Press `<Control>-C m` to preview the file
