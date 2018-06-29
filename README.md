@@ -11,8 +11,8 @@ the original version of Marked, you will need to download [Marked Bonus Pack
 
 ## Installation and Usage
 
-Note that for some of the installation targets listed below --- specifically
-__Services__, __BBEdit__, __Sublime Text__, and __iA Writer__ --- you can use
+Note that for some of the installation targets listed below — specifically
+__Services__, __BBEdit__, __Sublime Text__, and __iA Writer__ — you can use
 the provided
 [install](./install) script.
 
