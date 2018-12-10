@@ -13,13 +13,13 @@ bbedit() {
 st2() {
     ST2_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/User"
     mkdir -p "$ST2_DIR"
-    cp "Marked 2.sublime-build" "$ST2_DIR"
+    cp "Sublime/Marked 2.sublime-build" "$ST2_DIR"
 }
 
 st3() {
     ST3_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
     mkdir -p "$ST3_DIR"
-    cp "Marked 2.sublime-build" "$ST3_DIR"
+    cp "Sublime/Marked 2.sublime-build" "$ST3_DIR"
 }
 
 iawriter() {
