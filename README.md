@@ -93,6 +93,23 @@ for more information about emacs startup.
 Once installed, restart Emacs. Press `<Control>-C m` to preview the file
 associated with the current buffer in Marked 2.
 
+### Visual Studio Code
+
+This project does not contain anything to help you integrate with
+[Visual Studio Code](https://code.visualstudio.com/). However, Fabian
+Morón Zirfas has created an
+[Open in Marked Extension](https://marketplace.visualstudio.com/items?itemName=fmoronzirfas.open-in-marked). Once the extension is installed, you can open the current file in Marked 2
+by typing `<Command>-<Shift>-P` and then typing `marked` to narrow the list
+of commands, and then selecting "Open In Marked 2".
+
+To bind it to a keyboard shortcut, select `Code`, `Preferences`, `Keyboard Shortcuts`
+from the menu to open the keyboard shortcuts editor. Type `marked` to narrow the list
+of commands, and then double-click on "Open in Marked 2". Type the keyboard shortcut
+you want, and press `return`.
+
+See [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings)
+for more information on binding shortcuts to commands.
+
 ### AppleScript
 
 There's one AppleScript included that performs essentially the same function as
