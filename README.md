@@ -21,8 +21,8 @@ Marked, others will automatically update without any interaction from the user.
 
 ### Drafts
 
-Drafts for Mac includes support for the Streaming Preview, but you must
-enable it:
+[Drafts for Mac](https://getdrafts.com/) includes support for Streaming Preview,
+but you must enable it:
 
 - Open Drafts
 - Click on the **Drafts > Preferences** menu (or press ⌘,)
@@ -35,6 +35,17 @@ Now you have a live Marked preview that updates as you type in Drafts.
 
 Tip: You can re-open the `Streaming Preview` window in Marked by clicking the
 **Preview > Streaming Preview** menu.
+
+### nvALT
+
+Enable the Streaming Preview in [nvALT](https://brettterpstra.com/projects/nvalt/)
+by selecting the **Preview > Streaming Preview in Marked** menu option.
+
+### The Archive
+
+[The Archive](https://zettelkasten.de/the-archive/) includes support for
+Streaming Preview. Choose the **Note > Stream Preview to Marked** menu option to
+enable. The Marked preview updates as you type, no saving required.
 
 
 ## Installation and Usage
@@ -130,12 +141,13 @@ associated with the current buffer in Marked 2.
 
 ### Visual Studio Code
 
-This project does not contain anything to help you integrate with
-[Visual Studio Code](https://code.visualstudio.com/). However, Fabian
-Morón Zirfas has created an
-[Open in Marked Extension](https://marketplace.visualstudio.com/items?itemName=fmoronzirfas.open-in-marked). Once the extension is installed, you can open the current file in Marked 2
-by typing ⇧⌘P and then typing `marked` to narrow the list
-of commands, and then selecting "Open In Marked 2".
+This project does not contain anything to help you integrate with [Visual Studio
+Code](https://code.visualstudio.com/). However, Fabian Morón Zirfas has created
+an [Open in Marked
+Extension](https://marketplace.visualstudio.com/items?itemName=fmoronzirfas.open-in-marked).
+Once the extension is installed, you can open the current file in Marked 2 by
+typing ⇧⌘P and then typing `marked` to narrow the list of commands, and then
+selecting "Open In Marked 2".
 
 To bind it to a keyboard shortcut, select the **Code > Preferences > Keyboard Shortcuts**
 menu to open the keyboard shortcuts editor. Type `marked` to narrow the list
