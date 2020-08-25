@@ -1,17 +1,51 @@
-# Marked Bonus Pack #
+# Marked Bonus Pack
 
-The Marked Bonus Pack is a collection of scripts, commands and services. Some
-work with multiple editors, some are specific to certain editors. The Services
-will generally work with any editor that has the necessary capabilities. The
-rest are organized in folders based on the application they work with.
+The Marked Bonus Pack is a collection of scripts, commands, services, and
+documentation. Some work with multiple editors, some are specific to certain
+editors. The Services will generally work with any editor that has the necessary
+capabilities. The rest are organized in folders based on the application they
+work with.
 
 These items work with [Marked 2](http://marked2app.com). If you need support for
 the original version of Marked, you will need to download [Marked Bonus Pack
 1.5](https://github.com/kotfu/marked-bonus-pack/releases/tag/v1.5)
 
+## Works With Marked
+
+Some applications work with Marked out of the box and don't require you to
+install anything else. These applications take advantage of the Marked
+[Streaming Preview](https://marked2app.com/help/Streaming_Preview.html) feature.
+This feature requires developers to implement Marked support in their
+application. Some apps will have a Preview command to manually send updates to
+Marked, others will automatically update without any interaction from the user.
+
+### Drafts
+
+Drafts for Mac includes support for the Streaming Preview, but you must
+enable it:
+
+- Open Drafts
+- Click on the **Drafts > Preferences** menu (or press ⌘,)
+- Click on the `General` tab
+- Select the `Enable Marked App Streaming Preview support` checkbox.
+- Click the `Open Marked` button to launch Marked and open the `Streaming Preview` window
+- Close the Drafts Preferences window
+
+Now you have a live Marked preview that updates as you type in Drafts.
+
+Tip: You can re-open the `Streaming Preview` window in Marked by clicking the
+**Preview > Streaming Preview** menu.
+
+
 ## Installation and Usage
 
-Note that for some of the installation targets listed below — specifically
+If you aren't familiar with GitHub, click on the green button that says `Code`
+at the top of this page and then choose `Download Zip`. Unzip the file on your
+computer.
+
+If you are familiar with GitHub, you know what to do.
+
+For some of the installation targets listed below — specifically
 __Services__, __BBEdit__, __Sublime Text__, and __iA Writer__ — you can use
 the provided
 [install](./install) script.
@@ -20,30 +54,31 @@ the provided
 
 Put the Services in `~/Library/Services`, where `~` is your user's home folder.
 If you want hotkeys for the services, assign them in **System
-Preferences->Keyboard->Shortcuts->Services**.
+Preferences > Keyboard > Shortcuts > Services**.
 
 ### BBEdit
 
 Place `BBEdit/Open in Marked.applescript` in `~/Library/Application Support/BBEdit/Scripts/`.
 Use from the Script menu bar item while editing a Markdown document (must be
-saved first). You can assign a keyboard shortcut in BBEedit **Preferences->Menus
+saved first). You can assign a keyboard shortcut in BBEedit **Preferences > Menus
 & Shortcuts**.
 
 ### TextMate
 
 Double-click on the `Marked 2` bundle to open it in TextMate's Bundle Editor.
-You can access the preview commands using `Control-Alt-M`. There are two of
-these commands, one previews the current document and will watch the associated
-file for future changes, the other previews the current selection using a
-temporary file. The latter will not update automatically.
+You can access the preview commands using the ⌃⌥M keyboard
+shortcut. There are two of these commands, one previews the current document and
+will watch the associated file for future changes, the other previews the
+current selection using a temporary file. The latter will not update
+automatically.
 
 ### Sublime Text
 
-Copy the `Marked 2.sublime-build` file to `~/Library/Application Support/Sublime Text 3/Packages/User/`.
-It will show up in the "Build Systems" section of the **Tools** menu in Sublime.
-When selected, pressing `Command-B` will open the current file in Marked for
-preview. Once opened, changes to the file will be tracked automatically by
-Marked.
+Copy the `Marked 2.sublime-build` file to `~/Library/Application Support/Sublime
+Text 3/Packages/User/`. It will show up in the **Build Systems** section of the
+**Tools** menu in Sublime. When selected, pressing ⌘B will open the current file
+in Marked for preview. Once opened, changes to the file will be tracked
+automatically by Marked.
 
 (This extension will also work with Sublime Text 2. Just copy
 `Marked 2.sublime-build` to
@@ -72,8 +107,8 @@ you want, but has to start with a capital letter.
 
 Via [stephenhowells](https://gist.github.com/stephenhowells/4599997):
 
-Copy `iAWriter/Open in Marked.applescript` to `~/Library/Scripts/Applications/iA Writer/`. Run by clicking
-the Script menu and selecting "Open in Marked" from the "iA Writer" section.
+Copy `iAWriter/Open in Marked.applescript` to `~/Library/Scripts/Applications/iA
+Writer/`. Run by clicking the **Script > iA Writer > Open in Marked** menu.
 
 ### Emacs
 
@@ -90,7 +125,7 @@ See
 [The Emacs Initialization File](http://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html)
 for more information about emacs startup.
 
-Once installed, restart Emacs. Press `<Control>-C m` to preview the file
+Once installed, restart Emacs. Press **Control-C m** to preview the file
 associated with the current buffer in Marked 2.
 
 ### Visual Studio Code
@@ -99,13 +134,13 @@ This project does not contain anything to help you integrate with
 [Visual Studio Code](https://code.visualstudio.com/). However, Fabian
 Morón Zirfas has created an
 [Open in Marked Extension](https://marketplace.visualstudio.com/items?itemName=fmoronzirfas.open-in-marked). Once the extension is installed, you can open the current file in Marked 2
-by typing `<Command>-<Shift>-P` and then typing `marked` to narrow the list
+by typing ⇧⌘P and then typing `marked` to narrow the list
 of commands, and then selecting "Open In Marked 2".
 
-To bind it to a keyboard shortcut, select `Code`, `Preferences`, `Keyboard Shortcuts`
-from the menu to open the keyboard shortcuts editor. Type `marked` to narrow the list
+To bind it to a keyboard shortcut, select the **Code > Preferences > Keyboard Shortcuts**
+menu to open the keyboard shortcuts editor. Type `marked` to narrow the list
 of commands, and then double-click on "Open in Marked 2". Type the keyboard shortcut
-you want, and press `return`.
+you want, and press **Return**.
 
 See [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings)
 for more information on binding shortcuts to commands.
