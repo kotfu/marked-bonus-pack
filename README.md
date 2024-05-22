@@ -1,4 +1,4 @@
-# Marked Bonus Pack #
+# Marked Bonus Pack
 
 The Marked Bonus Pack is a collection of scripts, commands and services. Some work with multiple editors, some are specific to certain editors. The Services will generally work with any editor that has the necessary capabilities. The rest are organized in folders based on the application they work with.
 
@@ -20,7 +20,7 @@ Double-click on the `Marked 2` bundle to open it in TextMate's Bundle Editor. Yo
 
 ### Sublime Text 2
 
-Copy the `Marked 2.sublime-build1` file to `~/Library/Application Support/Sublime Text 2/Packages/User/`. It will show up in the "Build Systems" section of the **Tools** menu in Sublime. When selected, pressing `Command-B` will open the current file in Marked for preview. Once opened, changes to the file will be tracked automatically by Marked.
+Copy the `Marked 2.sublime-build1` file to `~/Library/Application Support/Sublime Text 3/Packages/User/`. It will show up in the "Build Systems" section of the **Tools** menu in Sublime. When selected, pressing `Command-B` will open the current file in Marked for preview. Once opened, changes to the file will be tracked automatically by Marked.
 
 ### Vim
 
@@ -50,9 +50,8 @@ Once installed, restart Emacs. Press `<Control>-C m` to preview the file associa
 
 There's one AppleScript included that performs essentially the same function as the Open in Marked Service, but with some special accommodations for [Notational Velocity](http://notational.net/) and [nvALT](http://brettterpstra.com/project/nvalt/). In order to use it, two configuration variables need to be edited at the top of the script. Open the .applescript file in AppleScript Editor and modify the `property` lines at the top, then save it as a compiled script (scpt) file. You can then run it from the AppleScript menu (enabled in the AppleScript Editor preferences), or from a hotkey-capable application like [FastScripts](http://www.red-sweater.com/fastscripts/).
 
-The nvALT scripts do their best to figure out the file, but don't always work. The next version of nvALT should make this a lot easier.
 
-### Watchers ###
+### Watchers
 
 Marked version 1 required some watcher scripts to work with Scrivener and MarsEdit. Marked 2 has built in support for these applications, and no watcher scripts are required.
 
@@ -89,4 +88,6 @@ You need to configure the script to point to your chosen folder for note storage
 [nv]: http://notational.net
 [nvalt]: http://brettterpstra.com/projects/nvalt
 
+## Running multiple Custom Pre/Processors
 
+If you use Marked's Custom Processor and/or Preprocessor functionality, you may want to check out [Conductor](https://github.com/ttscoff/marked-conductor "ttscoff/marked-conductor"), which allows you to run different processors based on natural language conditions. For example, run one custom (pre)processor for Obsidian notes, a different one for blog posts, and another one for GitHub READMEs. There's a sample config available at [github.com/ttscoff/conductor-config/](https://github.com/ttscoff/conductor-config/).
