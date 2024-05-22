@@ -1,0 +1,60 @@
+#! /usr/bin/env bash
+
+services() {
+    cp -r Services/* $HOME/Library/Services
+}
+
+bbedit() {
+    BBEDIT_DIR="$HOME/Library/Application Support/BBEdit/Scripts/"
+    mkdir -p "$BBEDIT_DIR"
+    cp "BBEdit/Open in Marked.applescript" "$BBEDIT_DIR"
+}
+
+st2() {
+    ST2_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/User"
+    mkdir -p "$ST2_DIR"
+    cp "Sublime/Marked 2.sublime-build" "$ST2_DIR"
+}
+
+st3() {
+    ST3_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+    mkdir -p "$ST3_DIR"
+    cp "Sublime/Marked 2.sublime-build" "$ST3_DIR"
+}
+
+iawriter() {
+    IAWRITER_DIR="$HOME/Library/Scripts/Applications/iA Writer/"
+    mkdir -p "$IAWRITER_DIR"
+    cp "iAWriter/Open in Marked.applescript" "$IAWRITER_DIR"
+}
+
+# TODO:
+#   Add vim support.
+#   Add emacs support.
+
+if [[ -z $@ ]]
+then
+    cat << EOF
+This scriptlet automates installing *some* elements of the Marked
+bonus pack. It currently supports the targets listed below, using the
+corresponding keywords:
+
+    Target            Keyword
+    --------------    --------
+    Services          services
+    BBEdit.           bbedit
+    Sublime Text 2    st2
+    Sublime Text 3    st3
+    iA Writer.        iawriter
+
+Invoke it with one or more of the keywords as arguments, e.g.
+
+    ./install services st3
+EOF
+else
+    for i in $@
+    do
+        echo "Installing $i"
+        $i
+    done
+fi
