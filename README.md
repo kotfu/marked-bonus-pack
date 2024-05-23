@@ -170,9 +170,6 @@ AppleScript menu (enabled in the AppleScript Editor preferences), or from a
 hotkey-capable application like
 [FastScripts](http://www.red-sweater.com/fastscripts/).
 
-The nvALT scripts do their best to figure out the file, but don't always work.
-The next version of nvALT should make this a lot easier.
-
 ### Watchers
 
 Marked version 1 required some watcher scripts to work with Scrivener and
@@ -245,3 +242,12 @@ if you look at the top of the script.
 
 [nv]: http://notational.net
 [nvalt]: http://brettterpstra.com/projects/nvalt
+
+## Running multiple Custom Pre/Processors
+
+If you use Marked's Custom Processor and/or Preprocessor functionality, you may want 
+to check out [Conductor](https://github.com/ttscoff/marked-conductor "ttscoff/marked-conductor"), 
+which allows you to run different processors based on natural language conditions. For example, 
+run one custom (pre)processor for Obsidian notes, a different one for blog posts, and 
+another one for GitHub READMEs. There's a sample config available at 
+[github.com/ttscoff/conductor-config/](https://github.com/ttscoff/conductor-config/).
